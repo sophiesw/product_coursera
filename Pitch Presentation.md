@@ -1,4 +1,4 @@
-Pitch Presentation -Shiny application
+Pitch Presentation - Shiny application
 ========================================================
 author: Anonymous
 date: Nov 14, 2014
@@ -32,7 +32,7 @@ fit <- lm(price ~ carat, data = diamond)
 r <- coef(fit)
 ##build the prediction function
 price <- function(carat){as.numeric(r[1] + r[2] * carat)}
-##here, we see a example. If the caract is 0.6, then we can obtain the price as the following.
+##we can run a test then. If the caract is 0.6. Then the result would be:
 price(0.6)
 ```
 
@@ -50,6 +50,7 @@ Appearance of App (4)
 
 Where to Find the App (5)
 ========================================================
+
 - This app can be found on the following web address.
 - https://sophiesw.shinyapps.io/shiny/
 - After opening the website, it will be run automatically.
