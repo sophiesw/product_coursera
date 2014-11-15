@@ -49,6 +49,7 @@ Appearance of App (4)
 
 Where to Find the App (5)
 ========================================================
+
 - This app can be found on the following web address.
 - https://sophiesw.shinyapps.io/shiny/
 - After opening the website, it will be run automatically.
