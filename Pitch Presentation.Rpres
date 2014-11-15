@@ -1,4 +1,4 @@
-Pitch Presentation -Shiny application
+Pitch Presentation - Shiny application
 ========================================================
 author: Anonymous
 date: Nov 14, 2014
