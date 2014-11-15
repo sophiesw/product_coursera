@@ -25,18 +25,19 @@ Actual R Code for Developing Model(3)
 
 ```r
 library(UsingR)
-
-##load the dataset
-data(diamond)
-
+data(diamond) ##load the dataset
 ##run linear regression, with price as the outcome and carat as the predictor
 fit <- lm(price ~ carat, data = diamond)
-
 ##obtain the coefficient from the analysis
 r <- coef(fit)
-
 ##build the prediction function
 price <- function(carat){as.numeric(r[1] + r[2] * carat)}
+##we can run a test then. If the caract is 0.6. Then the result would be:
+price(0.6)
+```
+
+```
+[1] 1972.989
 ```
 
 Appearance of App (4)
