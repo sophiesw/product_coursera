@@ -1,0 +1,54 @@
+Pitch Presentation -Shiny application
+========================================================
+author: Anonymous
+date: Nov 14, 2014
+
+Shiny App for Diamond Price Prediction (1)
+========================================================
+
+- This presentation will introduce the newly developed shiny application.
+- This app provides the function of diamond price prediction.
+- If a user enter the amount of diamond in carat, the predicted price will be calculated and shown on the result panel.
+
+
+Prediction Model (2)
+========================================================
+
+- The prediction model for the app is built on a dataset, diamond, from the UsingR package.
+- The predictor is the carat, and the outcome of interest is the price.
+- By using linear regression, the coefficients for intercept and slope for carat are estimated.
+- Finally, we calculate the predicted price for carat by using these two coefficients.
+
+Actual R Code for Developing Model(3)
+========================================================
+
+
+```r
+library(UsingR)
+
+##load the dataset
+data(diamond)
+
+##run linear regression, with price as the outcome and carat as the predictor
+fit <- lm(price ~ carat, data = diamond)
+
+##obtain the coefficient from the analysis
+r <- coef(fit)
+
+##build the prediction function
+price <- function(carat){as.numeric(r[1] + r[2] * carat)}
+```
+
+Appearance of App (4)
+========================================================
+
+- There are two panels.
+- On the left panel, there is a blank for users to enter the amount of diamond (carat), as well as a submit button.
+- The result of predicted value will be shown on the right panel after the user press the submit button.
+- The price is reported as Singapore dollar.
+
+Where to Find the App (5)
+========================================================
+- This app can be found on the following web address.
+- https://sophiesw.shinyapps.io/shiny/
+- After opening the website, it will be run automatically.
